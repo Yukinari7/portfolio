@@ -1,5 +1,6 @@
 "use client"
 
+import { main } from "framer-motion/client"
 import { MailIcon } from "lucide-react"
 import { BiLogoTypescript } from "react-icons/bi"
 import { BsGithub } from "react-icons/bs"
@@ -46,7 +47,7 @@ const Cards = () => {
         </div>
       </div>
       </div>
-    </div>
+    </div> 
   )
 }
 
