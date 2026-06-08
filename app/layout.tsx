@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description: "A full stack developer building visually refined, high-performance web experiences.",
     type: "website",
     locale: "en_US",
-    url: "https://ememprinceson.com",
+    url: "https://ememprinceson.vercel.app",
     siteName: "Emem Princeson Portfolio",
   },
   twitter: {
