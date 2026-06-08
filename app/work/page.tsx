@@ -83,7 +83,7 @@ const [activeCard, setActiveCard] = useState<number | null>(null);
                               const Icon = link.icon;
         
                               return (
-                              <Link key={index} href={`/projects/${project.slug}`} className="active-scale:105"><Icon size={20} className="w-5 h-5"/></Link>
+                              <Link key={index} href={`/projects/${project.slug}`} className="z-20 active:scale-105"><Icon size={20} className="w-5 h-5"/></Link>
                               );
                             })}
                           </div>
@@ -93,7 +93,7 @@ const [activeCard, setActiveCard] = useState<number | null>(null);
                             {project.tools.map((tool, index)=>{
                               const Icon = tool.icon;
                               return (
-                              <div key={index} className="dark:bg-neutral-800 dark:text-gray-300 text-xs dark:border border-gray-700 p-1 rounded-full"><Icon size={25}/></div>
+                              <div key={index} className="dark:bg-neutral-800 dark:text-gray-300 text-xs border dark:border-gray-700 p-1 rounded-full"><Icon size={25}/></div>
                               );
                               })}
                           </div>

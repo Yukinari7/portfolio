@@ -85,12 +85,8 @@ useEffect(()=>{
       <div className='flex justify-end gap-4 cursor-pointer'>
         {/* Theme Icon */}
   <AnimatePresence mode="wait">
-  <button
-    onClick={() =>
-      setTheme(resolvedTheme === "light" ? "dark" : "light")
-    }
-    className="cursor-pointer relative overflow-hidden"
-  >
+  <button aria-label="Toggle theme" onClick={() =>setTheme(resolvedTheme === "light" ? "dark" : "light")}
+    className="cursor-pointer relative overflow-hidden">
     {resolvedTheme === "light" ? (
       <motion.div
         key="sun"

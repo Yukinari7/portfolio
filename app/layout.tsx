@@ -50,8 +50,37 @@ const epilogue = localFont({
 //});
 
 export const metadata: Metadata = {
-  title: "Emem Princeson | FullStack Dev.",
-  description: "A full stack developer building visually refined, high-performance web experience focused on modern design, seamless interactions and impactful user experience.",
+  title: "Emem Princeson | FullStack Developer",
+  description: "A full stack developer building visually refined, high-performance web experiences focused on modern design, seamless interactions and impactful user experience.",
+  keywords: ["fullstack developer", "Emem Princeson", "web developer", "React", "Next.js", "JavaScript", "portfolio"],
+  authors: [{ name: "Emem Princeson" }],
+  openGraph: {
+    title: "Emem Princeson | FullStack Developer",
+    description: "A full stack developer building visually refined, high-performance web experiences.",
+    type: "website",
+    locale: "en_US",
+    url: "https://ememprinceson.com",
+    siteName: "Emem Princeson Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emem Princeson | FullStack Developer",
+    description: "A full stack developer building visually refined, high-performance web experiences.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  verification: {
+    google: "google3e1f9c1c7b06acb3.html",
+  },
 };
 
 export default function RootLayout({

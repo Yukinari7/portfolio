@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ememprinceson.vercel.app
+
+# Sitemaps
+Sitemap: https://ememprinceson.vercel.app/sitemap.xml

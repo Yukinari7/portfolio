@@ -1,17 +1,14 @@
 "use client"
 
-import { project } from "@/components/Data/data"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6"
-import { motion } from "framer-motion"
 import FadeUp from "@/components/motion/FadeUp"
 
 
 export default function page() {
-const [activeCard, setActiveCard] = useState<number | null>(null);
 
 const ref = useRef<HTMLDivElement>(null);
 useEffect (()=> {

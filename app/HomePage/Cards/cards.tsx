@@ -6,6 +6,7 @@ import { BiLogoTypescript } from "react-icons/bi"
 import { BsGithub } from "react-icons/bs"
 import { FaLinkedin, FaNodeJs, FaReact, FaTelegram, FaXTwitter } from "react-icons/fa6"
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
+import { SiExpo } from "react-icons/si"
 
 const Cards = () => {
   return (
@@ -29,6 +30,9 @@ const Cards = () => {
           </div>
           <div className="flex flex-col justify-between items-center gap-2">
             <div className="py-2 px-4 border border bg-neutral-900 rounded-xl border-zinc-800"><FaNodeJs className="w-8 h-8 text-green-600"/></div>
+          </div>                                     
+          <div className="flex flex-col justify-between items-center gap-2">
+            <div className="py-2 px-4 border border bg-neutral-900 rounded-xl border-zinc-800"><SiExpo className="w-8 h-8 text-white"/></div>
           </div>
           </div>
         </div>

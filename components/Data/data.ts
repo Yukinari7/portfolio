@@ -1,7 +1,7 @@
 import { InfoIcon, Globe, Pencil, Smartphone } from "lucide-react";
 import { CgCodeSlash } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa6";
-import { SiAppwrite, SiExpo, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss } from "react-icons/si";
+import { SiExpo, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss } from "react-icons/si";
 
 export const cardData = [
     {
@@ -218,7 +218,7 @@ export const project = [
     category: "Webapp • e-commerce",
     icon: Globe,
     label: "411",
-    description: "Designed & Built a modern solar energy website focused on clean UI, responsive performance and clear service representation using modern web technologies.",
+    description: "411 is a modern full-stack e-commerce platform built to deliver a fast, scalable and seamless online shopping experience. The application combines a...",
     tools: [
       {icon: SiNextdotjs, label:"Next.js"},
       {icon: SiReact, label: "React"},
@@ -236,16 +236,17 @@ export const project = [
   },
   {
     id: 5,
-    slug: "stack-up",
+    slug: "fintech-mobile-app",
     status:"IN PROGRESS",
     category: "Mobile App",
     icon: Smartphone,
-    label: "Stack Up",
-    description: "Designed & Built a modern solar energy website focused on clean UI, responsive performance and clear service repreentation using modern web technologies.",
+    label: "FMA",
+    description: "FMA is a secure friction-free personal finance application prioritizing responsive interactions and transaction integrity. With secure localized biometric device authentication...",
     tools: [
-      {icon: SiNextdotjs, label:"Next.js"},
-      {icon: SiReact, label: "React"},
-      {icon: SiTailwindcss, label: "Tailwind css"},
+      {icon: SiExpo, label:"Expo"},
+      {icon: SiReact, label: "React Native"},
+      {icon: SiTailwindcss, label: "Native Wind"},
+      {icon: SiPostgresql, label: "PostgreSQL"},
       {icon: SiNodedotjs, label: "Node.js"}
     ],
     links: [
@@ -265,8 +266,8 @@ export const projectPage = [
   {
     slug: "event-planner",
     title: "EPT",
-    description: "An Event Planner Tool built to enable users create, manage and schedule events.",
-    overview: "Event planner is a modern full-stack event management platform designed to simplify event organization, booking coordination and attendee management through a seamless digital experience allowing users to create, manage and schedule events efficiently.",
+    description: "Streamlining chaotic event workflows into single-pane-of-glass collaborative dashboards.",
+    overview: "EPT is a modern full-stack event management platform designed to simplify event organization, booking coordination and attendee management through a seamless digital experience allowing users to create, manage and schedule events efficiently.",
     status: "In development",
     banner: "/images/",
     gallery: [
@@ -280,24 +281,28 @@ export const projectPage = [
       "Tailwind CSS",
       "TypeScript",
       "Framer Motion",
+      "Prisma ORM",
+      "PostgreSQL" 
     ],
 
     features: [
-      "Responsive design",
+      "Real time multi-user timeline scheduler",
       "SEO optimization",
-      "Contact integration",
+      "Data integration",
       "Animated sections",
     ],
 
-    challenge: "Creating smooth animations while keeping Lighthouse score high. Used optimized images, dynamic imports and Framer Motion.",
+    challenge: "High-volume, concurrent client modifications on a shared event timeline generated race conditions. Simultaneous element updates and deletions caused data collisions, forcing browser state mismatches and critical UI crashes.",
+    solution: "Re-architected the state layer to utilize an optimistic UI strategy paired with custom conflict-resolution hooks. Client action registers instantly on the viewport while running a n0n-blocking execution payload server-side; conflicting states gracefully trigger a silent, automated data rollback to ensure system stability and 100% data.",
     liveLink: "",
     githubLink: "",
   },
-  {
+
+    {   
     slug: "hollis",
     title: "Hollis",
-    description: "A premium snack ordering platform focused on clean UI and performance.",
-    overview: "A premium restaurant ordering platform.",
+    description: "Automated scheduling and service resource optimization engine built for modern client handling.",
+    overview: "Hollis is a booking platform designed to simplify reservations and elevate the guest experience. The system enables users to explore available rooms, make secure bookings, manage reservations and experience a seamless hospitality journey through an intuitive and responsive interface.",
     status: "In progress",
     banner: "/images/dashboard.webp",
     gallery: [
@@ -305,16 +310,23 @@ export const projectPage = [
       "/images/food-2.webp",
     ],
     stack: [
+      "Next.js",
+      "TailwindCss",
+      "Shadcn UI",
       "React",
       "MongoDB",
-      "Tailwind CSS",
+      "Express",
+      "Upstash Redis"
     ],
     features: [
-      "Cart system",
-      "Order tracking",
-      "Authentication",
+      "Dynamic, interactive time-slot engine",
+      "Integrated paystack payment workflow",
+      "Authentication, Analytics & Automated text/email notification loop",
+      "Responsive dashbaord",
+      "Role-based auth"
     ],
-    challenge: "Building responsive layouts for restaurant cards.",
+    challenge: "Concurrent heavy scheduling attempts on identical slots triggered database race conditions, resulting in overlapping double-bookings.",
+    solution: "Integrated a distributed locking layer using Upstash Redis. The system safely checks and holds temporarily slot claims on the server-side, forcing conflicting users into a clean front-end state refresh before database entry.",
     liveLink: "",
     githubLink: "",
   },
@@ -322,8 +334,8 @@ export const projectPage = [
   {
     slug: "xenex",
     title: "Xenex",
-    description: "A premium snack ordering platform focused on clean UI and performance.",
-    overview: "A premium restaurant ordering platform.",
+    description: "A premium engineering platform providing architectures for renewable energy adoption.",
+    overview: ".",
     status: "Completed",
     banner: "/images/food-banner.webp",
     gallery: [
@@ -331,25 +343,27 @@ export const projectPage = [
       "/images/food-2.webp",
     ],
     stack: [
+      "Resend",
       "React",
       "MongoDB",
       "Tailwind CSS",
     ],
     features: [
-      "Cart system",
-      "Order tracking",
-      "Authentication",
+        "Engineered premium visual interface",
+        "Interactive, touch-optimized swiper grids",
+        "Dedicated lead generation layout"
     ],
-    challenge: "Building responsive layouts for restaurant cards.",
+    challenge: "Utilizng classic client-side script integrations directly on the primary viewport caused substantial Total Blocking Time (TBT), tanking early mobile optimization efforts down to 43.",
+    solution: "Re-architected core scripts into custom server-side API routes utilizing Next.js App routes. Extracted complex packages entirely away from the main client thread, allowing the initial bundle sizes to plummet.",
     liveLink: "",
-    githubLink: "",
+    githubLink:"",
   },
 
   {
     slug: "411",
     title: "411",
-    description: "A premium snack ordering platform focused on clean UI and performance.",
-    overview: "A premium restaurant ordering platform.",
+    description: "Ultra-fast storefront utilizing a headless architecture to power sub-second page loads and seamless scaling.",
+    overview: "411 is a modern full-stack e-commerce platform built to deliver a fast, scalable and seamless online shopping experience. The application combines a high-performance storefront with a headless content management architecture powered by Sanity, enabling dynamic product management, flexible content delivery and efficient store administration.",
     status: "In progress",
     banner: "/images/xenex.png",
     gallery: [
@@ -357,25 +371,29 @@ export const projectPage = [
       "/images/food-2.webp",
     ],
     stack: [
-      "React",
-      "MongoDB",
+      "Next.js",
       "Tailwind CSS",
+      "Headless CMS (Sanity)",
+      "Paystack API",
+      "Clerk js",
+      "MongoDB",
     ],
     features: [
-      "Cart system",
-      "Order tracking",
-      "Authentication",
+      "Fully decouple commerce layer driven dynamically",
+      "Instant global search and multi-layer structural filtering",
+      "Fully optimized checkout flows integrated natively",
     ],
-    challenge: "Building responsive layouts for restaurant cards.",
+    challenge: "Loading high-resolution product imagery and asset-heavy gallery grids on product indexes spiked the Largest Contentful Paint (LCP) past 13 seconds on stimulated mobile connections.",
+    solution: "Stripped standard asset blocks out for explicit Next.js <Image /> elements flagged with strict layout priority properties. Replaced dynamic lower components with next/dynamic lazy loading, successfully driving the core LCP metrics into the green.",
     liveLink: "",
-    githubLink: "",
+    githubLink:"",
   },
 
   {
-    slug: "stack-up",
-    title: "Stack Up",
-    description: "A premium snack ordering platform focused on clean UI and performance.",
-    overview: "A premium restaurant ordering platform.",
+    slug: "fintech-mobile-app",
+    title: "FMA",
+    description: "A premium finance platform focused on clean UI and absolute transaction integrity.",
+    overview: "FMA is a secure friction-free personal finance application prioritizing responsive interactions and transaction integrity.",
     status: "In progress",
     banner: "/images/xenex.png",
     gallery: [
@@ -384,18 +402,19 @@ export const projectPage = [
     ],
     stack: [
       "Expo",
-      "MongoDB",
       "React Native",
-      "App Write"
+      "postgreSQL",
+      "Tailwind CSS (Native wind)",
+      "Biometrics API",
     ],
     features: [
-      "Cart system",
-      "Order tracking",
+      "Ledger balance with custom category spending controls",
+      "Digital wallet generation & balance transfers via custom QR code scanning",
       "Authentication",
     ],
-    challenge: "Building responsive layouts for restaurant cards.",
-    liveLink: "",
-    githubLink: "",
+    challenge: "Pulling active financial balances and dynamic charts over fluctuating mobile network grids created noticeable data rendering stutters",
+    solution: "Designed an internal background syncing algorithm paired with local persistent storage caching. Giving optimistic updates and immediate feedbacks regardless of connection speeds",
+    hideLiveButton: true,
   },
 ];
 
@@ -409,7 +428,7 @@ export const projectData = [
     category: "All",
     icon: Globe,
     label: "EPT",
-    description: "Event planner is a modern full-stack event management platform designed to simplify event organization, booking coordination and attendee management through a seamless...",
+    description: "Event planner is a modern full-stack event management platform designed to simplify event organization, booking coordination and attendee management...",
     tools: [
       {icon: SiNextdotjs, label:"Next.js"},
       {icon: SiReact, label: "React"},
@@ -501,21 +520,22 @@ export const projectData = [
 
   {
     id: 5,
-    slug: "stack-up",
+    slug: "fintech-mobile-app",
     status:"IN PROGRESS",
     group: "Mobile App",
     category: "All",
     icon: Smartphone,
-    label: "Stack Up",
-    description: "Designed & Built a modern solar energy website focused on clean UI, responsive performance and clear service repreentation using modern web technologies.",
+    label: "FMA",
+    description: "FMA is a secure friction-free personal finance application prioritizing responsive interactions and transaction integrity. With secure localized biometric device authentication...",
     tools: [
       {icon: SiExpo, label:"Next.js"},
       {icon: SiReact, label: "React"},
-      {icon: SiNodedotjs, label: "Node.js"}
+      {icon: SiNodedotjs, label: "Node.js"},
+      {icon: SiPostgresql, label: "PostgreSQL"}
     ],
     links: [
         {
-            slug: "stack-up",
+            slug: "fintech-mobile-app",
             icon: InfoIcon
             
         },
@@ -620,26 +640,26 @@ export const projectData = [
   },
     {
     id: 10,
-    slug: "stack-up",
+    slug: "fintech-mobile-app",
     status:"IN PROGRESS",
     group: "Mobile App",
     category: "Mobile App",
     icon: Smartphone,
-    label: "Stack Up",
-    description: "Designed & Built a modern solar energy website focused on clean UI, responsive performance and clear service repreentation using modern web technologies.",
+    label: "FMA",
+    description: "FMA is a secure friction-free personal finance application prioritizing responsive interactions and transaction integrity.",
     tools: [
-      {icon: SiExpo, label:"Expo"},
+      {icon: SiExpo, label:"Next.js"},
       {icon: SiReact, label: "React"},
       {icon: SiNodedotjs, label: "Node.js"},
-      {icon: SiAppwrite, label: "App-write"}
+      {icon: SiPostgresql, label: "PostgreSQL"}
     ],
     links: [
         {
-            slug: "shopsave",
+            slug: "fintech-mobile-app",
             icon: InfoIcon
             
         },
     ],
     image: "/images/xenex.png",
-  },
+  }
 ]

@@ -266,7 +266,7 @@ useEffect(() => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.3 }}
-                            className="bg-red-50 border-l-[2px] border-red-600 flex flex-col w-full gap-2 rounded-lg md:hidden flex"
+                            className="bg-red-50 border-l-[2px] border-red-600 flex flex-col w-full gap-2 md:hidden flex"
                           >
                             <div className="text-red-600 px-5 py-2">
                                 {errorMessages.map((m, i) => (
@@ -281,14 +281,14 @@ useEffect(() => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -10 }}
                               transition={{ duration: 0.3 }}
-                              className="bg-green-50 border-l-[2px] border-green-600 flex flex-col w-full gap-2 rounded-lg md:hidden flex"
+                              className="bg-green-50 border-l-[2px] border-green-600 flex flex-col w-full gap-2 md:hidden flex"
                             >
                               <div className="text-green-600 px-5 py-2">{successMessage}</div>
                             </motion.div>
                           ) : null}
                     </AnimatePresence>
                 </div>
-                <button onClick={() => setOpen(false)} className="absolute md:top-3 top-5 text-black dark:text-white right-4 w-10 h-10 cursor-pointer"><CgClose/></button>
+                <button aria-label="Close modal" onClick={() => setOpen(false)} className="absolute md:top-3 top-5 text-black dark:text-white right-4 w-10 h-10 cursor-pointer"><CgClose/></button>
             </div>
         </div>
     </div>

@@ -58,7 +58,7 @@ export default function Projects() {
                     {project.tools.map((tool, index)=>{
                       const Icon = tool.icon;
                       return (
-                      <div key={index} className="dark:bg-neutral-800 dark:text-gray-300 text-xs dark:border border-gray-700 p-1 rounded-full"><Icon size={25}/></div>
+                      <div key={index} className="dark:bg-neutral-800 dark:text-gray-300 text-xs border dark:border-gray-700 p-1 rounded-full"><Icon size={25}/></div>
                       );
                       })}
                   </div>
