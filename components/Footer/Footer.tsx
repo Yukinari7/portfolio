@@ -25,7 +25,7 @@ const [open, setOpen] = useState(false);
         <div className="py-3 mx-auto w-[90%]">
             <div className="flex flex-col md:flex-row items-center justify-between gap-3">
                 <p className="text-gray-600 text-xs">© 2026 Emem Princeson. All rights reserved</p>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-5">
                     {footerLinks.map((link)=>{
                         const Icon = link.icon
                         return (

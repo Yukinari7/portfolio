@@ -53,8 +53,8 @@ const [open, setOpen] = useState(false);
 </h1>
       <p className='text-base'>I build fast and modern web experiences with clean UI, functionality and performance-driven architecture.</p>
       <div className='flex flex-row gap-2'>
-        <button onClick={()=>setOpen(true)} className='py-1 px-1 pl-2 border md:text-lg border-gray-400 dark:border-white/70 rounded-full flex items-center gap-2 shadow-xl cursor-pointer'>Get in touch<div className='dark:bg-[#e5e4e2] rounded-full w-8 h-8 flex items-center justify-center'><MessagesSquare className='w-5 h-5 text-black animate-bounce mt-1'/></div></button>
-        <Link href="/work" className='py-1 px-3 bg-black text-white dark:bg-[#e5e4e2] dark:hover:bg-gray-300 hover:bg-gray-700 transition-all duration-300 dark:text-black rounded-full border md:text-lg flex items-center gap-2'>View works</Link>
+        <button onClick={()=>setOpen(true)} className='py-1 px-1 pl-2 border md:text-lg border-gray-400 dark:border-white/70 rounded-full flex items-center gap-2 shadow-sm cursor-pointer'>Get in touch<div className='dark:bg-[#e5e4e2] rounded-full w-8 h-8 flex items-center justify-center'><MessagesSquare className='w-5 h-5 text-black animate-bounce mt-1'/></div></button>
+        <Link href="/work" className='py-1 px-3 bg-black text-white dark:bg-[#e5e4e2] dark:hover:bg-gray-300 hover:bg-neutral-700 transition-all duration-300 dark:text-black rounded-full border md:text-lg flex items-center gap-2'>View works</Link>
       </div>
     </div>
     <ContactModal open={open} setOpen={setOpen}/>

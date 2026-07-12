@@ -50,7 +50,7 @@ useEffect(()=>{
           ${pathname === "/" ? "dark:text-black text-[#e5e4e2]" : "text-black dark:text-white bg-[#e5e4e2] dark:bg-transparent"}`}
         />
       </Link>
-        <div className={`relative fixed dark:border dark:bg-transparent border-gray-300 dark:border-gray-700 rounded-full flex items-center justify-center gap-3 px-1 py-1 shadow-md ${navBg}`}>
+        <div className={`relative fixed dark:border dark:bg-transparent border border-gray-300 dark:border-gray-700 rounded-full flex items-center justify-center gap-3 px-1 py-1 shadow-md ${navBg}`}>
           {navLinks.map((link)=>{
             if (link.type === "modal") {
             return (

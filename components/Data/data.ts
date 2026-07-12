@@ -177,7 +177,8 @@ export const project = [
       {icon: SiNextdotjs, label:"Next.js"},
       {icon: SiReact, label: "React"},
       {icon: SiTailwindcss, label: "Tailwind css"},
-      {icon: SiNodedotjs, label: "Node.js"}
+      {icon: SiNodedotjs, label: "Node.js"},
+      {icon: SiPostgresql, label: "PostgreSQL"},
     ],
     links: [
         {
@@ -314,8 +315,9 @@ export const projectPage = [
       "TailwindCss",
       "Shadcn UI",
       "React",
-      "MongoDB",
-      "Express",
+      "PostgreSQL",
+      "PrismaORM",
+      "NeonAuth",
       "Upstash Redis"
     ],
     features: [
@@ -457,7 +459,8 @@ export const projectData = [
       {icon: SiNextdotjs, label:"Next.js"},
       {icon: SiReact, label: "React"},
       {icon: SiTailwindcss, label: "Tailwind css"},
-      {icon: SiNodedotjs, label: "Node.js"}
+      {icon: SiNodedotjs, label: "Node.js"},
+      {icon: SiPostgresql, label: "PostgreSQL"},
     ],
     links: [
         {

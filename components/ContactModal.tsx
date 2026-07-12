@@ -288,7 +288,7 @@ useEffect(() => {
                           ) : null}
                     </AnimatePresence>
                 </div>
-                <button aria-label="Close modal" onClick={() => setOpen(false)} className="absolute md:top-3 top-5 text-black dark:text-white right-4 w-10 h-10 cursor-pointer"><CgClose/></button>
+                <button aria-label="Close modal" onClick={() => setOpen(false)} className="absolute top-5 text-black dark:text-white right-5 cursor-pointer active:scale-105"><CgClose className="w-5 h-5"/></button>
             </div>
         </div>
     </div>
