@@ -30,7 +30,7 @@ const [open, setOpen] = useState(false);
                         const Icon = link.icon
                         return (
                             <a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                                <Icon className="w-7 h-7 text-black"/>
+                                <Icon className="w-8 h-8 text-black"/>
                             </a>
                         )
                     })}
