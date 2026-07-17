@@ -12,31 +12,25 @@ type HeroProps = {
 };
 
 const Hero = ({startAnimation}: HeroProps) => {
-const [open, setOpen] = useState(false);
+const [show, setShow] = useState(false);
   return (
     <div>
-    <div className='w-[90%] relative mx-auto max-w-2xl gap-4 text-center items-center xl:h-[100vh] h-[90vh] md:h-[50vh] justify-center flex flex-col'>
+    <div className='w-[90%] relative mx-auto  gap-4 items-start xl:h-[100vh] h-[90vh] md:h-[50vh] justify-center flex flex-col'>
       <h1 className='text-5xl font-semibold xl:text-[5rem] lg:text-6xl md:text-6xl [font-family:var(--font-clash)] lg:[font-family:var(--font-antar)]'>
-  <motion.span
-  className="block"
-  initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
-  animate={
-    startAnimation
-      ? { opacity: 1, y: 0, filter: "blur(0px)" }
-      : { opacity: 0, y: 60, filter: "blur(10px)" }
-  }
->
-  Hi. I'm Emem,
-</motion.span>
-<div className='flex items-center justify-center gap-4'>
-<motion.span
-  className="block"
-  initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
-  animate={
-    startAnimation
-      ? { opacity: 1, y: 0, filter: "blur(0px)" }
-      : { opacity: 0, y: 60, filter: "blur(10px)" }
-  }
+        <motion.span className="block" initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
+          animate={startAnimation
+          ? { opacity: 1, y: 0, filter: "blur(0px)" }
+          : { opacity: 0, y: 60, filter: "blur(10px)" }
+          }>
+          Emem Princeson,
+        </motion.span>
+      <div className='flex items-center gap-4'>
+        <motion.span className="block text-gray-700 dark:text-gray-400" initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
+        animate={
+        startAnimation
+        ? { opacity: 1, y: 0, filter: "blur(0px)" }
+        : { opacity: 0, y: 60, filter: "blur(10px)" }
+        }
   transition={{type: "spring", stiffness: 160, damping: 15, delay: startAnimation ? 0.25 : 0, bounce: 0.8,}}>
   FullStack Dev.
 </motion.span>
@@ -52,12 +46,12 @@ const [open, setOpen] = useState(false);
 </div>
 </h1>
       <p className='text-base'>I build fast and modern web experiences with clean UI, functionality and performance-driven architecture.</p>
+      <div className="border-b border-gray-400 dark:border-gray-600 w-full"></div>
       <div className='flex flex-row gap-2'>
-        <button onClick={()=>setOpen(true)} className='py-1 px-1 pl-2 border md:text-lg border-gray-400 dark:border-white/70 rounded-full flex items-center gap-2 shadow-sm cursor-pointer'>Get in touch<div className='dark:bg-[#e5e4e2] rounded-full w-8 h-8 flex items-center justify-center'><MessagesSquare className='w-5 h-5 text-black animate-bounce mt-1'/></div></button>
         <Link href="/work" className='py-1 px-3 bg-black text-white dark:bg-[#e5e4e2] dark:hover:bg-gray-300 hover:bg-neutral-700 transition-all duration-300 dark:text-black rounded-full border md:text-lg flex items-center gap-2'>View works</Link>
       </div>
     </div>
-    <ContactModal open={open} setOpen={setOpen}/>
+    <ContactModal show={show} setShow={setShow}/>
     </div>
   )
 }

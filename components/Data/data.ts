@@ -19,13 +19,13 @@ export const cardData = [
         id:3,
         icon: FaGithub,
         title: "Version Control & Collaboration",
-        desc: "Turning design concepts into clean, precise and visually balanced user interfaces.",
+        desc: "Mastering Git workflow, managing branches, resolving complex merge conflicts and conduction constructive pull request reviews.",
     },
     {
         id:4,
         icon: CgCodeSlash,
         title: "API integration",
-        desc: "Turning design concepts into clean, precise and visually balanced user interfaces.",
+        desc: "Designing, consuming and securing APIs to fetch, sync and manipulate data seamlessly.",
     },
 ]
 
@@ -318,7 +318,8 @@ export const projectPage = [
       "PostgreSQL",
       "PrismaORM",
       "NeonAuth",
-      "Upstash Redis"
+      "Upstash Redis",
+      "Resend"
     ],
     features: [
       "Dynamic, interactive time-slot engine",

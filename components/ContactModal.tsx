@@ -7,11 +7,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
-    open:boolean;
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    show:boolean;
+    setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function ContactModal({open, setOpen}:Props) {
+export default function ContactModal({show, setShow}:Props) {
 const [isOnline, setIsOnline] = useState(true);
 const [connectionMessage, setConnectionMessage] = useState("");
 const [connectionType, setConnectionType] = useState<"online" | "offline" | null>(null);
@@ -75,7 +75,7 @@ useEffect(() => {
       return () => clearTimeout(t);
     }, [errorMessages]);
 
-    if (!open) return null;
+    if (!show) return null;
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -146,7 +146,7 @@ useEffect(() => {
                 <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] md:grid-cols-2 gap-5 py-16 md:px-5">
                 <div className="flex flex-col justify-between px-5">
                     <div className="space-y-4">
-                    <div className="rounded-full border border-gray-700 bg-neutral-900 flex items-center gap-2 w-fit py-1 px-1 text-xs text-gray-300 pr-2"><Mail className="w-5 h-5 p-1 border-none items-center bg-black text-yellow-500 flex justify-center rounded-full"/>Start a project</div>
+                    <div className="rounded-full border border-gray-700 bg-neutral-900 flex items-center gap-2 w-fit py-1 text-xs text-gray-300 px-3">Hey there!</div>
                     <h2 className="lg:text-6xl text-4xl font-[500] md:font-[300] text-black dark:text-[#e5e4e2] [font-family:var(--font-clash)] lg:[font-family:var(--font-antar)]">Let&apos;s build your next project.</h2>
                     <p className="dark:text-gray-400 text-gray-700 max-w-xl">Ready to launch your next project? Fill out the form or 
                       reach out directly to start a conversation about your business needs and how we can help you grow.</p>
@@ -200,7 +200,7 @@ useEffect(() => {
                               id="fullname"
                               name="name"
                               autoComplete="name"
-                              placeholder="Halley George"
+                              placeholder="Janelle Emem"
                               value={formData.name}
                               onChange={handleChange}
                               className="border border-gray-600 px-3 py-2 rounded-xl text-gray-400 w-full"
@@ -213,7 +213,7 @@ useEffect(() => {
                               id="email"
                               name="email"
                               autoComplete="email"
-                              placeholder="halley@example.com"
+                              placeholder="Janelle@example.com"
                               value={formData.email}
                               onChange={handleChange}
                               className="border border-gray-600 px-3 py-2 rounded-xl text-gray-400 w-full"
@@ -247,7 +247,7 @@ useEffect(() => {
                         placeholder="Tell me about your project..."
                         value={formData.message}
                         onChange={handleChange}
-                        className="border border-gray-600 p-2 h-[150px] rounded-xl w-full text-gray-300"></textarea>
+                        className="border border-gray-600 p-2 h-[150px] rounded-xl w-full text-gray-400"></textarea>
                     </div>
                     <button type="submit"
                     disabled={!isOnline || loading} 
@@ -288,7 +288,7 @@ useEffect(() => {
                           ) : null}
                     </AnimatePresence>
                 </div>
-                <button aria-label="Close modal" onClick={() => setOpen(false)} className="absolute top-5 text-black dark:text-white right-5 cursor-pointer active:scale-105"><CgClose className="w-5 h-5"/></button>
+                <button aria-label="Close modal" onClick={() => setShow(false)} className="absolute top-5 text-black dark:text-white right-5 cursor-pointer active:scale-105"><CgClose className="w-5 h-5"/></button>
             </div>
         </div>
     </div>

@@ -24,7 +24,7 @@ const tech = () => {
         </FadeUp>
         </div>
         <FadeUp delay={0.3}>
-        <p>Attention to details bridging the gap between complex design and technical execution.</p>
+        <p>Turning ambitious design into pixel-perfect code with an uncompromising eye for detail and technical precision.</p>
         </FadeUp>
       </div>
       <Cards/>

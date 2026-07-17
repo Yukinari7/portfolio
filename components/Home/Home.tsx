@@ -5,6 +5,7 @@ import Cards from "@/app/HomePage/Cards/cards"
 import Projects from "@/app/HomePage/Projects/projects"
 import Tech from "@/app/HomePage/Tech/tech"
 import { useState, useEffect } from "react";
+import ViewCounter from "../ViewCounter"
 
 const Home = () => {
   const [heroReady, setHeroReady] = useState(false);
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <Hero startAnimation={heroReady} />
+      <ViewCounter/>
       <Cards/>
       <Projects/>
       <Tech/>

@@ -6,7 +6,7 @@ import { useState } from "react"
 import ContactModal from "../ContactModal";
 
 const Footer = () => {
-const [open, setOpen] = useState(false);
+const [show, setShow] = useState(false);
   return (
     <div>
         <div className="border-t border-gray-400 dark:border-gray-600 w-full">
@@ -17,7 +17,7 @@ const [open, setOpen] = useState(false);
             </div>
                 <div className="space-y-4 mt-4">
                     <div className="border-l-1 border-gray-600 h-7 flex items-center text-gray-600 dark:text-gray-400"><a href="mailto:bemem52@gmail.com" className="text-base ml-2 ">bemem52@gmail.com</a></div>
-                <button onClick={()=>setOpen(true)} className="dark:bg-white bg-black hover:bg-gray-700 transition-all duration-300 rounded-lg py-2 px-4 font-semibold flex items-center text-[#e5e4e2] gap-1 dark:text-black">Hire me <BriefcaseBusiness className="w-5 h-5"/></button>
+                <button onClick={()=>setShow(true)} className="dark:bg-white bg-black hover:bg-gray-700 transition-all duration-300 rounded-lg py-2 px-4 font-semibold flex items-center text-[#e5e4e2] gap-1 dark:text-black">Hire me <BriefcaseBusiness className="w-5 h-5"/></button>
                 </div>
         </div>
     </div>
@@ -38,7 +38,7 @@ const [open, setOpen] = useState(false);
             </div>
         </div>
     </div>
-    <ContactModal open={open} setOpen={setOpen}/>
+    <ContactModal show={show} setShow={setShow}/>
     </div>
   )
 }
