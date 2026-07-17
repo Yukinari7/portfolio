@@ -38,7 +38,7 @@ const pathname = usePathname()
             })}
         </div>
         <div> 
-            <button onClick={()=>setOpen(!open)} className={`relative w-10 h-10 cursor-pointer bg-neutral-800 dark:bg-white rounded-full flex flex-col 
+            <button onClick={()=>setOpen(!open)} className={`relative w-12 h-12 cursor-pointer bg-neutral-800 dark:bg-white rounded-full flex flex-col border border-gray-700
                 items-center justify-center gap-1 active:scale-105 transition-all duration-300 ease-in-out ${isVisible ? "opacity-100 translate-y-0 scale-100 pointer-events-auto":"translate-y-4 scale-75 pointer-events-none opacity-0"}`}>
                 <span className={`h-[2px] w-5 bg-white dark:bg-black rounded-full transition-all duration-300 ${open ? "rotate-45 translate-y-[4px] transition-all duration-300":""}`}></span>
                 <span className={`h-[2px] w-5 bg-white dark:bg-black rounded-full transition-all duration-300 ${open ? "-rotate-45 -translate-y-[2px] transition-all duration-300":""}`}></span>

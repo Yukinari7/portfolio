@@ -23,8 +23,8 @@ const scrollUp =()=> {
 }
   return (
     <div>
-        <button onClick={scrollUp} className={`bg-transparent border-[2px] border-black dark:border-none dark:bg-white flex text-black 
-            rounded-full w-10 h-10 md:w-12 md:h-12 items-center justify-center focus:outline-none transition-all duration-300 
+        <button onClick={scrollUp} className={`bg-neutral-800 border border-gray-700 dark:bg-white flex text-white dark:text-black 
+            rounded-full w-12 h-12 items-center justify-center focus:outline-none transition-all duration-300 
             ease-in-out ${isVisible ? "opacity-100":"opacity-0"}`}><FaArrowUp className="animate-bounce w-4 h-4 md:w-5 md:h-5"/>
         </button>
     </div>

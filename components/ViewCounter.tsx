@@ -9,6 +9,8 @@ const endpoint = hasVisited ? 'https://abacus.jasoncameron.dev/get/ememprinceson
     fetch(endpoint)
     .then((res)=> res.json())
     .then((data)=> {
+        setViews(data.value);
+
         if (!hasVisited) {
             localStorage.setItem(storageKey, 'true');
         }
@@ -16,6 +18,6 @@ const endpoint = hasVisited ? 'https://abacus.jasoncameron.dev/get/ememprinceson
     .catch((err)=> console.error("Error fetching view count:", err))
 },[])
   return (
-    <div className="w-[90%] mx-auto justify-center pb-15 text-sm text-gray-600 dark:text-gray-400">{views !== null ? (<span>Global Reach: {views.toLocaleString()} visitors</span>):(<span>Global Reach: --- visitors</span>)}</div>
+    <div className="w-[90%] mx-auto justify-center pb-15 text-sm text-gray-600 dark:text-gray-400">{views !== null ? (<span>Global Reach: {views.toLocaleString()} visitors.</span>):(<span>Global Reach: --- visitors</span>)}</div>
   )
 }

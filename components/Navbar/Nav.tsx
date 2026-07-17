@@ -95,7 +95,7 @@ const [show, setShow]= useState(false);
         }}
       >
         <Moon
-          className="bg-neutral-800 text-white w-10 h-10 md:w-12 md:h-12 p-2 rounded-full border border-gray-700"
+          className="bg-neutral-800 text-white w-12 h-12 p-2 rounded-full border border-gray-700"
         />
       </motion.div>
     ) : (
@@ -110,7 +110,7 @@ const [show, setShow]= useState(false);
         }}
       >
         <Sun
-          className="bg-white text-black w-10 h-10 md:w-12 md:h-12 p-2 rounded-full border border-gray-300"
+          className="bg-white text-black w-12 h-12 p-2 rounded-full border border-gray-300"
         />
       </motion.div>
     )}
