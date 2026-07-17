@@ -1,4 +1,5 @@
 
+import { FolderOpen, House, Send, UserRound } from "lucide-react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTelegram, FaXTwitter } from "react-icons/fa6";
 
@@ -19,6 +20,33 @@ export const navLinks = [
         label: 'Contact'
     },
 ];
+
+export const sideNavLinks = [
+    {
+        id: 1,
+        url: '/',
+        label: 'Home',
+        icon: House
+    },
+    {
+        id: 2,
+        url: '/about',
+        label: 'About',
+        icon: UserRound
+    },
+    {
+        id: 3,
+        url: '/work',
+        label: 'Work',
+        icon: FolderOpen
+    },
+    {
+        id: 4,
+        type: 'modal',
+        label: 'Contact',
+        icon: Send
+    },
+]
 
 export const footerLinks = [
     {
