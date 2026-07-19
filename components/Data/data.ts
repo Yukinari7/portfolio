@@ -168,7 +168,7 @@ export const project = [
   {
     id: 2,
     slug: "hollis",
-    status:"IN PROGRESS",
+    status:"COMPLETED",
     category: "Webapp • Booking management system",
     icon: Globe,
     label: "Hollis",
@@ -187,7 +187,7 @@ export const project = [
             
         },
     ],
-    image: "/images/dashboard.webp",
+    image: "/images/Hollis.webp",
   },
   {
     id: 3,
@@ -272,9 +272,9 @@ export const projectPage = [
     status: "In development",
     banner: "/images/",
     gallery: [
-      "/images/solar-1.webp",
-      "/images/solar-2.webp",
-      "/images/solar-3.webp",
+      {image: "/images/food-1.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""}
     ],
 
     stack: [
@@ -304,11 +304,12 @@ export const projectPage = [
     title: "Hollis",
     description: "Automated scheduling and service resource optimization engine built for modern client handling.",
     overview: "Hollis is a booking platform designed to simplify reservations and elevate the guest experience. The system enables users to explore available rooms, make secure bookings, manage reservations and experience a seamless hospitality journey through an intuitive and responsive interface.",
-    status: "In progress",
-    banner: "/images/dashboard.webp",
+    status: "Completed",
+    banner: "/images/Hollis.webp",
     gallery: [
-      "/images/food-1.webp",
-      "/images/food-2.webp",
+      {image: "/images/hollis-admin-dashboard.webp", label: "Admin dashboard"},
+      {image: "/images/hollis-booking.webp", label: "Booking page"},
+      {image: "/images/hollis-room.webp", label: "Rooms View"}
     ],
     stack: [
       "Next.js",
@@ -330,8 +331,8 @@ export const projectPage = [
     ],
     challenge: "Concurrent heavy scheduling attempts on identical slots triggered database race conditions, resulting in overlapping double-bookings.",
     solution: "Integrated a distributed locking layer using Upstash Redis. The system safely checks and holds temporarily slot claims on the server-side, forcing conflicting users into a clean front-end state refresh before database entry.",
-    liveLink: "",
-    githubLink: "",
+    liveLink: "https://hollis-app.vercel.app",
+    githubLink: "https://github.com/Yukinari7/hollis-booking-system",
   },
 
   {
@@ -342,8 +343,9 @@ export const projectPage = [
     status: "Completed",
     banner: "/images/food-banner.webp",
     gallery: [
-      "/images/food-1.webp",
-      "/images/food-2.webp",
+      {image: "/images/food-1.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""}
     ],
     stack: [
       "Resend",
@@ -370,8 +372,9 @@ export const projectPage = [
     status: "In progress",
     banner: "/images/xenex.png",
     gallery: [
-      "/images/food-1.webp",
-      "/images/food-2.webp",
+      {image: "/images/food-1.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""}
     ],
     stack: [
       "Next.js",
@@ -400,8 +403,9 @@ export const projectPage = [
     status: "In progress",
     banner: "/images/xenex.png",
     gallery: [
-      "/images/food-1.webp",
-      "/images/food-2.webp",
+      {image: "/images/food-1.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""},
+      {image: "/images/food-2.webp", label: ""}
     ],
     stack: [
       "Expo",
@@ -450,7 +454,7 @@ export const projectData = [
     {
     id: 2,
     slug: "hollis",
-    status:"IN PROGRESS",
+    status:"COMPLETED",
     group: "Web App • Booking Management System",
     category: "All",
     icon: Globe,
@@ -470,7 +474,7 @@ export const projectData = [
             
         },
     ],
-    image: "/images/dashboard.webp",
+    image: "/images/Hollis.webp",
   },
     {
     id: 3,

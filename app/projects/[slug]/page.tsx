@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import FadeUp from "@/components/motion/FadeUp";
 import BackButton from "@/components/BackButton";
+import ProjectGallery from "@/components/ProjectGallery";
 
 type Props = {
   params: Promise<{
@@ -62,8 +63,9 @@ projectPage[(currentIndex + 1) % projectPage.length];
         </div>
       </div>
 
-      <div className="relative h-[300px] overflow-hidden my-10">
-        <Image src={project.banner}  alt={project.title} fill priority className="object-cover"/>
+      <div className="my-10">
+        <Image src={project.banner} alt={project.title} width={1920} height={1080} priority
+        className="w-full h-auto border border-neutral-200 dark:border-neutral-800"/>
       </div>
 
       <div className="w-full border border-b border-gray-600 dark:border-gray-600"></div>
@@ -106,6 +108,7 @@ projectPage[(currentIndex + 1) % projectPage.length];
         </div>
       </div>
     </div>
+    <ProjectGallery gallery={project.gallery}/>
     <div className="pt-10 flex flex-col md:flex-row justify-between gap-2">
       <Link href={"/work"} className="dark:bg-white py-2 px-4 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-300 
       text-white dark:text-black bg-black duration-200 transition-all flex items-center gap-2 

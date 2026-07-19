@@ -10,7 +10,7 @@ type Props = {
 export default function Loader({onFinish}:Props) {
 const [progress, setProgress] = useState(0);
 
-const text = 'Em.Dev';
+const text = 'Hello!';
 
 useEffect(()=>{
     const audio = new Audio("/startUp.mp3");
@@ -45,11 +45,8 @@ useEffect(()=>{
         <div className="flex flex-col items-center gap-6">
 
         {/* LOGO */}
-
         <div className="flex text-5xl lg:text-7xl font-bold">
-
           {text.split("").map((letter, index) => (
-
             <motion.span
               key={index} initial={{
                 opacity: 0,
@@ -83,8 +80,8 @@ useEffect(()=>{
         <motion.p
           animate={{opacity: [0.5, 1, 0.5],}}
           transition={{repeat: Infinity, duration: 2,}}
-          className="dark:text-gray-500 text-gray-800 text-sm tracking-[0.3em] [font-family:var(--font-clash)]">
-          {progress}% — INITIALIZING
+          className="dark:text-gray-500 text-gray-800 text-center text-sm tracking-[0.3em] [font-family:var(--font-clash)]">
+          {progress}% — INITIALIZING <br/> loading case studies and architecture...
         </motion.p>
       </div>
     </motion.div>

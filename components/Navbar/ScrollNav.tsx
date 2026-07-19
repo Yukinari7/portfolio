@@ -24,17 +24,17 @@ useEffect(()=>{
 },[])
 const pathname = usePathname()
   return (
-    <div className="fixed top-4 right-4 z-100 flex gap-2 items-center md:items-start">
-        <div className={`bg-neutral-800 dark:bg-white rounded-full p-3 space-x-4 flex items-center transition-all duration-300 ease-in-out ${isVisible && open ? "opacity-100 scale-100 pointer-events-auto":"opacity-0 scale-95 pointer-events-auto"}`}>
+    <div className="fixed top-4 right-4 z-100 flex gap-2 items-center md:items-star">
+        <div className={`bg-neutral-800 dark:bg-white rounded-full p-3.5 space-x-4 flex items-center transition-all duration-300 ease-in-out ${isVisible && open ? "opacity-100 scale-100 pointer-events-auto":"opacity-0 scale-95 pointer-events-auto"}`}>
             {sideNavLinks.map((link)=>{
             const Icon = link.icon
                 if (link.type === "modal") {
                     return (
-                        <button key={link.id} onClick={()=>setShow(true)} className="text-white dark:text-black cursor-pointer"><Icon className={`transition-all duration-300 ${pathname === link.url ? "font-bold text-white dark:text-black":"w-5 h-5 text-gray-300 dark:text-gray-600"}`}/></button>
+                        <button key={link.id} onClick={()=>setShow(true)} className="text-white dark:text-black cursor-pointer"><Icon className={`w-6 h-6 transition-all duration-300 ${pathname === link.url ? "font-bold text-white dark:text-black":"w-5 h-5 text-gray-300 dark:text-gray-600"}`}/></button>
                     )
                 }
                 return (
-                    <Link key={link.id} href={link.url!} className="text-white dark:text-black"><Icon className={`transition-all duration-300 ${pathname === link.url ? "font-bold text-white dark:text-black":"w-5 h-5 text-gray-300 dark:text-gray-600"}`}/></Link>
+                    <Link key={link.id} href={link.url!} className="text-white dark:text-black"><Icon className={`w-6 h-6 transition-all duration-300 ${pathname === link.url ? "font-bold text-yellow-500 dark:text-black":"w-5 h-5 text-gray-300 dark:text-gray-600"}`}/></Link>
                 )
             })}
         </div>
